@@ -3,16 +3,6 @@
 
 Tento projekt slouží k stažení výsledků parlamentních voleb z roku 2017 z webu [volby.cz](https://www.volby.cz). Skript umí zpracovat libovolný okres (územní celek) podle zadané URL adresy. Vybere si odkazy na jednotlivé obce a stáhne informace o počtu voličů, platných hlasů a hlasy pro každou stranu. Vše uloží do přehledné tabulky .csv.
 
-# Použití
-
-Skript se spouští z příkazové řádky pomocí dvou argumentů:
-
-python main.py "<odkaz-na-okres-z-volby.cz>" "nazev_vystupniho_souboru.csv"
-
-Například:
-
-python main.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2104" "vysledky_benesov.csv"
-
 # Použité nástroje
 
 Pracuji ve Visual Studio Code, používám PowerShell a verzi Pythonu 3.13.2.  
@@ -45,6 +35,10 @@ pip freeze > requirements.txt
 Skript spouštěj pomocí dvou argumentů:
 - První argument: URL stránky s výběrem obcí (např. Benešov)
 - Druhý argument: název výstupního CSV souboru (musí končit `.csv`)
+
+python main.py "<odkaz-na-okres-z-volby.cz>" "nazev_vystupniho_souboru.csv"
+
+Například:
 
 python main.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" "vysledky_benesov.csv"
 
